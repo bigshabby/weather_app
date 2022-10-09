@@ -26,6 +26,10 @@ Future<void> main() async {
       try {
         final coordinates = await geoApi.getCoordinates(inputFormatted);
         final weather = await weatherApi.getWeatherData(coordinates);
+        print('''
+
+        Here is the weather for $input today:
+''');
         weather.printWeatherData();
       } on ApiException catch (e) {
         print('\n${e.message}\n');

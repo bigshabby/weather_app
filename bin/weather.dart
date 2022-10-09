@@ -27,9 +27,6 @@ class Weather {
 
   void printWeatherData() {
     print('''
-
-        Here is the weather for today:
-
         CURRENT WEATHER
         
         Temperature: $temp °F
