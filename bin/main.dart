@@ -15,8 +15,8 @@ Future<void> main() async {
     stdout.write(
         "Where would you like to check the weather for today? (city/address) [Enter 'q' to quit] ");
     final input = stdin.readLineSync();
-    if (input == null) {
-      print('Syntax: dart bin/main.dart <address>');
+    if (input == null || input == '') {
+      print('\nNo address/city was entered. Please try again.\n');
     } else if (input == 'q') {
       break;
     } else {
